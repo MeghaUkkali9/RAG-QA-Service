@@ -1,11 +1,7 @@
-"""Application configuration using pydantic-settings."""
-
 from functools import lru_cache
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 class Settings(BaseSettings):
-    """Application settings loaded from environment variables."""
-
     model_config = SettingsConfigDict(
         env_file=".env",
         env_file_encoding="utf-8",
@@ -51,7 +47,7 @@ class Settings(BaseSettings):
     api_port: int = 8000
 
     # Application Info
-    app_name: str = "RAG Q&A System"
+    app_name: str = "RAG Q&A Service"
     app_version: str = "0.1.0"
 
 

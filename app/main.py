@@ -71,7 +71,6 @@ async def root():
 
 @app.exception_handler(Exception)
 async def global_exception_handler(request: Request, exc: Exception):
-    """Global exception handler."""
     logger = get_logger(__name__)
     logger.error(f"Unhandled exception: {exc}", exc_info=True)
 
