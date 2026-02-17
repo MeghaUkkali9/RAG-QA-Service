@@ -1,0 +1,5 @@
+create vitual enviironment: uv venv .ragenv
+activate env: source .ragenv/bin/activate. this comand gets inside the virtual env.
+
+Create requirements file where all required packages are mentioned and those are installed.
+To install all packages that are entioned in requirements.txt: uv pip install -r requirements.txt

@@ -1,0 +1,32 @@
+#Core features
+fastapi
+uvicorn[standard]
+python-multipart
+
+#Langchain & AI
+langchain
+langchain-openai
+langchain-qdrant
+langchain-community
+langchain-text-splitters
+
+#Vector Database
+qdrant-client
+
+#Document Processing
+pypdf
+python-docs
+
+#Configuration & Monitoring
+pydantic
+pydantic-settings
+python-dotenv
+
+#Logging and Monitoring
+structlog
+langsmith==0.4.55
+
+##HTTP client
+httpx
+datasets
+ragas==0.3.7
