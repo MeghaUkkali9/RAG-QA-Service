@@ -3,3 +3,8 @@ activate env: source .ragenv/bin/activate. this comand gets inside the virtual e
 
 Create requirements file where all required packages are mentioned and those are installed.
 To install all packages that are entioned in requirements.txt: uv pip install -r requirements.txt
+
+To run app: unicorn app.main:app --reload     
+http://127.0.0.1:8000/docs
+
+To check health of the application : http://127.0.0.1:8000/health
