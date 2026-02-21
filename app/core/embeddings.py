@@ -7,7 +7,6 @@ from app.utils.logger import get_logger
 
 logger = get_logger(__name__)
 
-
 @lru_cache
 def get_embeddings() -> OpenAIEmbeddings:
     settings = get_settings()

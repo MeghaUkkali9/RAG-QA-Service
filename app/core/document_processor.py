@@ -52,7 +52,6 @@ class DocumentProcessor:
         logger.info(f"Loaded {len(documents)} pages from {file_path.name}")
         return documents
 
-
     def load_text(self, file_path: str | Path) -> list[Document]:
      
         file_path = Path(file_path)
@@ -74,7 +73,6 @@ class DocumentProcessor:
 
         logger.info(f"Loaded {len(documents)} rows from {file_path.name}")
         return documents
-
 
     def load_file(self, file_path: str | Path) -> list[Document]:
       
@@ -119,7 +117,6 @@ class DocumentProcessor:
         finally:
             Path(tmp_path).unlink(missing_ok=True)
 
-
     def split_documents(self, documents: list[Document]) -> list[Document]:
        
         logger.info(f"Splitting {len(documents)} documents into chunks")
@@ -133,7 +130,6 @@ class DocumentProcessor:
     def process_file(self, file_path: str | Path) -> list[Document]:
         documents = self.load_file(file_path)
         return self.split_documents(documents)
-
 
     def process_upload(self, file: BinaryIO, filename: str, ) -> list[Document]:
         documents = self.load_from_upload(file, filename)

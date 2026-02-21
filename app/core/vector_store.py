@@ -29,10 +29,7 @@ def get_qdrant_client() -> QdrantClient:
     logger.info("Qdrant client connected successfully")
     return client
 
-
-
 class VectorStoreService:
-
     def __init__(self, collection_name: str | None = None):
         self.collection_name = collection_name or settings.collection_name
         self.client = get_qdrant_client()

@@ -28,11 +28,9 @@ Answer:"""
 def format_docs(docs: list[Document]) -> str:
     return "\n\n---\n\n".join(doc.page_content for doc in docs)
 
-
 class RAGChain:
 
     def __init__(self, vector_store_service: VectorStoreService | None = None):
-      
         self.vector_store = vector_store_service or VectorStoreService()
         self.retriever = self.vector_store.get_retriever()
         self._evaluator = None
@@ -80,8 +78,7 @@ class RAGChain:
             logger.error(f"Error processing query: {e}")
             raise
 
-    def query_with_sources(self, question: str) -> dict:
-        
+    def query_with_sources(self, question: str) -> dict:   
         logger.info(f"Processing query with sources: {question[:100]}...")
 
         try:
@@ -112,7 +109,6 @@ class RAGChain:
             raise
 
     async def aquery(self, question: str) -> str:
-       
         logger.info(f"Processing async query: {question[:100]}...")
 
         try:
@@ -124,13 +120,11 @@ class RAGChain:
             raise
 
     async def aquery_with_sources(self, question: str) -> dict:
-       
         logger.info(f"Processing async query with sources: {question[:100]}...")
 
         try:
             
             answer = await self.chain.ainvoke(question)
-
             source_docs = self.retriever.invoke(question)
 
             sources = [

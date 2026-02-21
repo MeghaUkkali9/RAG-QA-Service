@@ -12,7 +12,6 @@ from app.utils.logger import get_logger
 
 logger = get_logger(__name__)
 
-
 class RAGASEvaluator:
 
     def __init__(self):
